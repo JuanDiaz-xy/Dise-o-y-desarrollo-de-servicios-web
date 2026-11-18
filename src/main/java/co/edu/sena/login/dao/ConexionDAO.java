@@ -19,6 +19,13 @@ public final class ConexionDAO {
         if (!url.startsWith("jdbc:mysql://")) {
             throw new SQLException("DB_URL debe utilizar el esquema jdbc:mysql://");
         }
+        try {
+            // En Tomcat el classloader del contenedor puede inicializar DriverManager
+            // antes de descubrir servicios JDBC empaquetados dentro del WAR.
+            Class.forName("com.mysql.cj.jdbc.Driver");
+        } catch (ClassNotFoundException ex) {
+            throw new SQLException("No está disponible MySQL Connector/J en la aplicación.", ex);
+        }
         return DriverManager.getConnection(url, user, password);
     }
 
