@@ -1,0 +1,10 @@
+/target/
+/.idea/
+/.vscode/
+/nbproject/private/
+*.class
+*.log
+.env
+.env.*
+!.env.example
+.DS_Store

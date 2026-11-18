@@ -1,0 +1,10 @@
+.git
+.gitignore
+.idea
+.vscode
+nbproject/private
+target
+*.log
+.env
+.env.*
+!*.env.example

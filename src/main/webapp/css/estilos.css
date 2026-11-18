@@ -1,0 +1,46 @@
+/* Estilos propios de las vistas JSP: diseño adaptable a PC y móvil. */
+:root { --azul:#172d54; --azul2:#0e2044; --acento:#4a7df0; --texto:#1d293c; --muted:#6d788a; --borde:#dce3ed; --fondo:#f6f8fc; }
+* { box-sizing:border-box; }
+body { margin:0; font-family:Inter,Segoe UI,Arial,sans-serif; color:var(--texto); background:var(--fondo); }
+.layout { min-height:100vh; display:grid; grid-template-columns:1fr 1fr; }
+.bienvenida { display:flex; flex-direction:column; justify-content:space-between; padding:44px 9%; color:white; background:radial-gradient(circle at 75% 30%, #32518c 0, #193767 30%, #0d1e40 80%); }
+.marca { display:flex; gap:12px; align-items:center; font-weight:750; font-size:18px; }
+.marca-icono { display:grid; place-items:center; width:38px; height:38px; border-radius:11px; background:#6794ff; color:white; font-size:13px; letter-spacing:.3px; }
+.bienvenida-contenido { max-width:530px; padding:56px 0; }
+.etiqueta,.mini-etiqueta,.etiqueta-panel { font-size:11px; font-weight:800; letter-spacing:2px; text-transform:uppercase; }
+.etiqueta { color:#b2cbff; }
+.bienvenida h1 { font-size:clamp(42px,4.4vw,67px); line-height:1.08; letter-spacing:-2px; margin:23px 0 22px; }
+.bienvenida p { color:#cbd5e8; font-size:17px; line-height:1.8; max-width:480px; }
+.puntos { display:flex; flex-direction:column; gap:15px; margin-top:35px; font-size:14px; color:#dce7fc; }
+.bienvenida small { color:#9eb0d0; line-height:1.5; }
+.form-area { display:grid; place-items:center; padding:36px 24px; }
+.form-card { width:min(100%,440px); padding:10px 0; }
+.registro-card { width:min(100%,460px); }
+.mini-etiqueta { color:#4e77ce; }
+h2 { font-size:37px; letter-spacing:-1.3px; margin:13px 0 9px; }
+.subtitulo { color:var(--muted); line-height:1.6; margin:0 0 30px; }
+form label { display:block; margin:16px 0 8px; font-weight:650; font-size:13px; }
+form input:not([type=hidden]) { background:white; display:block; width:100%; border:1px solid var(--borde); border-radius:10px; padding:15px 16px; outline:none; font-size:14px; color:var(--texto); transition:border-color .2s,box-shadow .2s; }
+form input:not([type=hidden]):focus { border-color:var(--acento); box-shadow:0 0 0 3px #4a7df024; }
+.boton { display:flex; width:100%; justify-content:space-between; align-items:center; margin-top:26px; padding:16px 21px; border:0; border-radius:10px; background:#2857bb; color:white; cursor:pointer; font-size:15px; font-weight:700; }
+.boton:hover { background:#17449f; }
+.pie-form { text-align:center; color:var(--muted); margin-top:28px; font-size:14px; }
+a { color:#2456b9; font-weight:700; text-decoration:none; }
+a:hover { text-decoration:underline; }
+.alerta { padding:14px; border-radius:9px; font-size:13px; line-height:1.55; margin:17px 0; }
+.alerta-error { background:#fff1f1; color:#9f1d34; border:1px solid #ffd4da; }
+.alerta-exito { background:#e9f8f0; color:#226a41; border:1px solid #c9ebd6; }
+.ayuda { font-size:12px; color:var(--muted); margin:12px 0 0; }
+.body-panel { min-height:100vh; }
+.barra-superior { display:flex; justify-content:space-between; align-items:center; background:white; border-bottom:1px solid var(--borde); padding:22px max(6%,20px); }
+.marca-oscura { color:var(--azul); }
+.salir { background:transparent; border:1px solid var(--borde); border-radius:9px; padding:10px 15px; color:var(--azul); cursor:pointer; font-weight:700; }
+.panel-contenido { max-width:1050px; margin:75px auto; padding:0 26px; }
+.etiqueta-panel { color:#3766c4; }
+.panel-contenido h1 { font-size:clamp(29px,5vw,49px); letter-spacing:-1.5px; margin:18px 0 12px; }
+.panel-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:18px; margin-top:38px; }
+.dato { padding:26px; border:1px solid var(--borde); border-radius:13px; background:white; min-width:0; }
+.dato span { display:block; font-size:13px; color:var(--muted); margin-bottom:18px; }
+.dato strong { font-size:18px; overflow-wrap:anywhere; }
+.panel-info { margin-top:26px; }
+@media (max-width:860px) { .layout { grid-template-columns:1fr; } .bienvenida { min-height:300px; padding:26px; } .bienvenida-contenido { padding:35px 0 10px; } .bienvenida h1 { font-size:35px; letter-spacing:-1px; } .bienvenida p { font-size:14px; } .puntos,.bienvenida small { display:none; } .form-area { padding:40px 24px; } .panel-grid { grid-template-columns:1fr; } }
